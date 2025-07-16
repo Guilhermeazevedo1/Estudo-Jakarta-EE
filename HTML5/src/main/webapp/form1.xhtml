@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>HTML5</title>
+</h:head>
+<body>
+<h:outputStylesheet libary="css" name="styles.css"/>
+
+	<h:form>
+		<h:panelGrid columns="2" columClasses="label">
+		Nome:
+		<h:inputText value="#{form.nome}" styleClass="text" pt:placeholder="Coloque aqui o seu nome"/>
+		
+		E-mail:
+		<h:inputText value="#{form.email}" styleClass="text" pt:placeholder="Coloque aqui seu email" pt:type="email"/>
+		
+		<h:commandButton value="Cadastro" action="#{form.processar}"/>
+		</h:panelGrid>
+	</h:form>
+
+</body>
+</html>
