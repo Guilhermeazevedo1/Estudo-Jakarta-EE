@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Validadores</title>
+</h:head>
+<body>
+	<h:outputStylesheet library="css" name="style.css"/>
+	<h:form>
+		<h:panelGrid columns="3" columnClasses="label">
+			Data de Nascimento:
+			<h:inputText id="dataNascimento" value="#{form.dataNascimento}" styleClass="text" required="true">
+				<f:convertDateTime for="dataNascimento" pattern="dd/MM/yyyy"/>
+				<f:validator validatorId="dateValidador"/>
+			</h:inputText>
+		</h:panelGrid>
+		<h:message for="dataNascimento" styleClass="error"/>
+		
+		<h:commandButton value="Processar" styleClass="button" action="result"/>
+	</h:form>
+</body>
+</html>
