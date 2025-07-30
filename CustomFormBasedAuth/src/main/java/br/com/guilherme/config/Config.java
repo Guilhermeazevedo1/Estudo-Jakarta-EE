@@ -1,0 +1,21 @@
+package br.com.guilherme.config;
+
+import javax.annotation.security.DeclareRoles;
+import javax.enterprise.context.ApplicationScoped;
+import javax.faces.annotation.FacesConfig;
+import javax.faces.annotation.FacesConfig.Version;
+import javax.security.enterprise.authentication.mechanism.http.CustomFormAuthenticationMechanismDefinition;
+import javax.security.enterprise.authentication.mechanism.http.LoginToContinue;
+
+@CustomFormAuthenticationMechanismDefinition(
+		loginToContinue = @LoginToContinue(
+				loginPage = "/login.faces",
+				errorPage = "/error.faces"
+				)
+)
+@DeclareRoles({"admin", "guest"})
+@FacesConfig(version = Version.JSF_2_3)
+@ApplicationScoped
+public class Config {
+}
+
