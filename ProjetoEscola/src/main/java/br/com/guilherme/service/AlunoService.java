@@ -31,8 +31,5 @@ public class AlunoService {
     	return alunoDao.buscarTodos();
     }
     
-    public AlunoService() {
-        // TODO Auto-generated constructor stub
-    }
 
 }

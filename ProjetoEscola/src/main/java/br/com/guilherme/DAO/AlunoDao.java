@@ -25,7 +25,7 @@ public class AlunoDao {
 	
 	public void excluir(Long id) {
 		Aluno aluno = em.find(Aluno.class, id);
-		if(aluno.getId() != null) {
+		if(aluno != null) {
 			em.remove(aluno);
 		}
 	}

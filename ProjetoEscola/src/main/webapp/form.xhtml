@@ -9,7 +9,20 @@
 <title>Formulário Cadastro de Alunos</title>
 </h:head>
 <body>
-
+	<h1>Novo Aluno</h1>
+	
+	<h:form>
+		<h:outputLabel value="Nome:" />
+		<h:inputText value="#{alunoBean.aluno.nome}" />
+		
+		<h:outputLabel value="Email:"/>
+		<h:inputText value="#{alunoBean.aluno.email}" />
+		
+		<h:outputLabel value="Idade:" />
+		<h:inputText value="#{alunoBean.aluno.idade}" />
+		
+		<h:commandButton value="Salvar" action="#{alunoBean.salvar}"/>
+	</h:form>
 
 </body>
 </html>
